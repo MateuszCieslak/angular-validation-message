@@ -1,0 +1,9 @@
+<form [formGroup]="form">
+  <div>
+    <label>Text1</label>
+    <input type="text" formControlName="text1">
+    <bo-validation-message [control]="form.controls.text1"></bo-validation-message>
+  </div>
+</form>
+
+<router-outlet></router-outlet>

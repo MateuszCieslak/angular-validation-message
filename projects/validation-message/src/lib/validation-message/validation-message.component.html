@@ -1,0 +1,11 @@
+<span [hidden]="control.valid || !control.touched" class="validation-message">
+  <bo-validation-message-template [control]="control" [validator]="'required'">
+    To pole jest wymagane
+  </bo-validation-message-template>
+
+  <bo-validation-message-template [control]="control" [validator]="'maxlength'">
+    Wartość nie może być dłuższa niż {{ control.errors?.maxlength?.requiredLength }}
+  </bo-validation-message-template>
+
+  <ng-content></ng-content>
+</span>
