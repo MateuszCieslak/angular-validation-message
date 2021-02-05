@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
 
 @Component({
@@ -12,6 +12,9 @@ export class ValidationMessageTemplateComponent {
 
   @Input()
   public control: AbstractControl;
+
+  @Input()
+  public translation: string;
 
   public active = true;
 

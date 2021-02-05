@@ -1,3 +1,4 @@
 <span *ngIf="shown && active">
-  <ng-content></ng-content>
+  <ng-content *ngIf="!translation"></ng-content>
+  <span *ngIf="translation" [translate]="translation" [translateParams]="control.errors[validator]"> </span>
 </span>
